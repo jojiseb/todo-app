@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.list_item_container {
+  display: flex;
+}
+
+.card_content {
+  flex: 1;
+}
+
+.favourite_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.searchField
+{
+  width: 40% !important;
+  padding: 1px;
+  margin-top: 5px;
+  margin-right: 6px;
+  border-color: blue;
+  font-size: 17px;
+}
+
+li
+{
+  list-style: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #e9e7e7;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: rgb(201, 198, 198);
+}
+
+.actions_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
