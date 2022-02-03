@@ -3,7 +3,8 @@ import {Navigate} from 'react-router-dom';
 import db from './firebase-config';
 import { doc, addDoc , updateDoc, deleteDoc ,collection,onSnapshot, orderBy, query, serverTimestamp} from "firebase/firestore";
 
-function Home({ user })
+
+function Home({ user})
 {
   const [task,setTask] = useState('');
   const [description,setDescription] = useState("");
@@ -114,7 +115,6 @@ function Home({ user })
                 <input type='text' placeholder="Describe what to do" value={description} onChange={(e) => setDescription(e.target.value)}/>
                 <br/><br/>
                 <button disabled={!task} type='submit'onClick={send}>Add Todo</button>&nbsp;
-                <button style={{justifyContent: "right"}}>Sign Out</button>&nbsp;
                 <button onClick={listOfCompleted}>{isCompleteFilterEnabled ? "Disable  Completed Filter": "Show only Completed"}</button>
                 <button onClick={listOfFavourites}>{isFavouriteFilterEnabled ? "Disable Favorites Filter": "Show only favorites"}</button>
             </div>
@@ -149,15 +149,6 @@ function Home({ user })
                      </div>
                       </div>
                       </div>
-                   
-                      {/*<button onClick={() => handleDelete(id)}>Delete</button>
-                     
-                      <button className="complete_button" onClick={() => toggleComplete(id, isComplete)}>
-                        {isComplete ? 
-                        "Completed"
-                        :
-                        "Complete"}
-                        </button>*/}
                     </li>
                   );
                 })}

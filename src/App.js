@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Home from './Home';
 import SignIn from './SignIn';
-//import Search from './Search';
 
 
 function App() {
@@ -16,8 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/signin' element={<SignIn setUser={setUser}/>}/>
-        <Route path='/' element={<Home user={user} />}/>
-        {/*<Route path='/search' element={<Search/>}/>*/}
+        <Route path='/' element={<Home user={user}/>}/>
       </Routes>
     </Router>
     </div>
