@@ -11,7 +11,6 @@ function Home({ user })
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [isFavouriteFilterEnabled, setIsFavouriteFilterEnabled] = useState(false);
   const [isCompleteFilterEnabled, setIsCompleteFilterEnabled] = useState(false);
-  const [search,setSearch] = useState('');
 
   const navigate = useNavigate();
 
@@ -99,12 +98,6 @@ function Home({ user })
     }
    }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate(`/search?name=${search}`)
-    setSearch('');
-  }
-
   if(!user) {
     return <Navigate to="/signin" replace={true}/>
   }
@@ -112,15 +105,6 @@ function Home({ user })
   return(
         <div className="main">
             <h1>Things to do...</h1>
-            
-            <form onSubmit={handleSubmit} style={{display: "inline"}}>
-              <input 
-                type='text'
-                className="searchField"
-                placeholder="Search title..."
-                onChange={(e) => setSearch(e.target.value)}
-                value={search}/>
-              </form>
             <br/>
             <br/>
             <div>
