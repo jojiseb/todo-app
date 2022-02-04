@@ -12,51 +12,151 @@ code {
     monospace;
 }
 
+.login {
+ display: flex;
+ height: 100vh;
+}
+
+.login_left_side {
+  /* background: red; */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.login_left_item {
+  /* background: gray; */
+}
+
+.signin_with_google {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.signin_with_google:hover {
+  box-shadow: 10px 9px 57px -29px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 9px 57px -29px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 9px 57px -29px rgba(0,0,0,0.75);
+}
+
+.login_right_side {
+/* background: blue; */
+width: 50%;
+height: 100%;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard_left {
+  /*background: green;*/
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+}
+
+.dashboard_left_item{
+  /*background: blue;*/
+}
+
+.add_todo {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.add_todo:hover {
+  box-shadow: 31px 21px 94px -98px rgba(0,0,0,0.75);
+-webkit-box-shadow: 31px 21px 94px -98px rgba(0,0,0,0.75);
+-moz-box-shadow: 31px 21px 94px -98px rgba(0,0,0,0.75);
+}
+
+.dashboard_right {
+  /*background: red;*/
+  width: 50%;
+  height: 100%;
+}
+
+label {
+  position: relative;
+}
+
+label::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+input {
+  padding: 10px 30px;
+}
+
+.add_button {
+  width: 342px;
+  height: 64px;
+  background: cornflowerblue;
+  color:  white;
+}
+
+select {
+  padding: 10px 30px;
+}
+
+.design
+{
+  left: 6.75%;
+right: 90.5%;
+top: 7.81%;
+bottom: 85.77%;
+}
+
+.dashboard_top_action_bar {
+  display: flex;
+  column-gap: 40px;
+}
+
+.dashboard_list_container {
+  width: 100%;
+  height: 75vh;
+    overflow: auto;
+}
+
 .list_item_container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
 }
 
-.card_content {
-  flex: 1;
-}
-
-.favourite_button {
+.list_option_button {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 40px;
 }
 
-.searchField
-{
-  width: 40% !important;
-  padding: 1px;
-  margin-top: 5px;
-  margin-right: 6px;
-  border-color: blue;
-  font-size: 17px;
-}
-
-li
-{
-  list-style: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #e9e7e7;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: rgb(201, 198, 198);
-}
-
-.actions_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.divider {
+  height: 80%;
+  width: 2px;
+  background: gray;
+    align-self: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.5;
 }
 
 .strikethrough {
