@@ -162,3 +162,57 @@ bottom: 85.77%;
 .strikethrough {
   text-decoration: line-through;
 }
+
+/*Responsiveness*/
+
+@media (max-width: 480px) and (orientation: portrait) {
+
+  .login {
+    display: block;
+  }
+
+  .login_left_side {
+    /* background: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .login_right_side {
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    left: 0px;
+  }
+
+  .dashboard {
+    display: block;
+  }
+
+  .dashboard_left {
+    /*background: green;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+  }
+
+  .divider {
+    height: 80%;
+    width: 2px;
+    background: gray;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    transform: rotate(90deg);
+  }
+
+}
